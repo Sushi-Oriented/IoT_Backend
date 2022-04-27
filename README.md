@@ -1,5 +1,5 @@
 # Project Title
-E.g Volcano Eruption Monitoring System :volcano:
+(Back-end) Volcano Eruption Monitoring System :volcano:
 
 ## Description
 - To monitor the volcano activity and warn the local authority regarding the volcano eruption
