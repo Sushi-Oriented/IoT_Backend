@@ -1,26 +1,31 @@
-# Server API
+# Project Title
+(Back-end) Volcano Eruption Monitoring System :volcano:
 
-Server API using Loopback
+## Description
+- To monitor the volcano activity and warn the local authority regarding the volcano eruption
 
-Model AppUser:
-1. System: register admin
-2. Admin: register admin, register manager, register supervisor, register normal user
-3. Manager: register supervisor, register normal user
-4. Supervisor: register normal user
+## Tools
+| Technology  | Name |
+| ------------- | ------------- |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" width="30" height="30"> | Laravel  |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/512px-Vue.js_Logo_2.svg.png?20170919082558" width="30" height="30"> | Vue JS  |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" width="30" height="30"> | React JS  |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" width="30" height="30"> | React JS  |
 
-API Route:
-1. registerAdmin - admin
-2. registerManager - admin
-3. registerSupervisor - admin, manager
-4. registerNormalUser - admin, manager, supervisor
+## Installation
 
-5. removeUser - admin: [owner, admin, manager, supervisor, normal], manager: [owner, supervisor, normal], supervisor: [owner, normal], normal: [owner]
+step-by-step
 
-6. listAdmin -admin
-7. listManager - admin
-8. istSupervisor - admin, manager
-9. listNormalUser - admin, manager, supervisor
 
-10. updateUser - admin: [admin, manager, supervisor, normal], manager: [owner, supervisor, normal], supervisor: [owner, normal], normal: [owner]
-11. changeUserRole - admin
-12. resetPasswordUser - admin: [admin, manager, supervisor, normal], manager: [owner], supervisor: [owner], normal: [owner]
+## About
+- Developer
+- Programmer
+- Project Manger
+- UI/UX
+- Database
+
+Amirul Faiz bin Ahmad Puad [abustika](https://github.com/abustika).<br/>
+Arif Masyhur bin Mohd Hatta [arifmasyhur20](https://github.com/arifmasyhur20). <br/>
+Muhammad Hafiz bin Khairol Nassuha [mhafizkn](https://github.com/mhafizkn). <br/>
+Alifah Ilyana binti Soharto [Airsha](https://github.com/aisrha). <br/>
+Iklil Izzati binti Kamaruzaman [iklilkamal](https://github.com/iklilkamal). <br/>
