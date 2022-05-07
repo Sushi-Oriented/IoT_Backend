@@ -1,0 +1,123 @@
+{
+  "name": "DeviceData",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_tx": {
+      "type": "number"
+    },
+    "volatge_input_tx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "power_solar_tx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "power_piezo_tx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "gps_date_tx": {
+      "type": "date",
+      "dataType": "date"
+    },
+    "gps_time_tx": {
+      "type": "date",
+      "dataType": "time"
+    },
+    "gps_latitude_tx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "gps_longitude_tx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "gps_altitude_tx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "gps_speed_tx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "sattelite": {
+      "type": "number"
+    },
+    "direction": {
+      "type": "string"
+    },
+    "rssi": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "snr": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "gps_date_rx": {
+      "type": "date",
+      "dataType": "date"
+    },
+    "gps_time_rx": {
+      "type": "date",
+      "dataType": "time"
+    },
+    "gps_latitude_rx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "gps_longitude_rx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "gps_altituder_rx": {
+      "type": "number",
+      "dataType": "double"
+    },
+    "createdDate": {
+      "type": "Date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": [
+        "find",
+        "count"
+      ]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": [
+        "find",
+        "count"
+      ]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW",
+      "property": [
+        "dataDevice"
+      ]
+    }
+  ],
+  "methods": {}
+}

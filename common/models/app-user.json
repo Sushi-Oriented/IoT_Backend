@@ -1,0 +1,146 @@
+{
+  "name": "AppUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "createdDate": {
+      "type": "Date",
+      "defaultFn": "now"
+    },
+    "createdBy": {
+      "type": "number",
+      "required": true
+    },
+    "modifiedDate": {
+      "type": "Date"
+    },
+    "modifiedBy": {
+      "type": "number"
+    },
+    "lastLogin": {
+      "type": "Date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "system",
+      "permission": "ALLOW",
+      "property": [
+        "find",
+        "patchAttributes",
+
+        "registerAdmin",
+        "registerManager",
+        "registerSupervisor",
+        "registerNormalUser",
+        "removeUser",
+        "listAdmin",
+        "listManager",
+        "listSupervisor",
+        "listNormalUser",
+        "updateUser",
+        "changeUserRole",
+        "resetPasswordUser"
+      ]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": [
+        "find",
+        "patchAttributes",
+
+        "registerAdmin",
+        "registerManager",
+        "registerSupervisor",
+        "registerNormalUser",
+        "removeUser",
+        "listAdmin",
+        "listManager",
+        "listSupervisor",
+        "listNormalUser",
+        "updateUser",
+        "changeUserRole",
+        "resetPasswordUser"
+      ]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": [
+        "findById",
+        "registerSupervisor",
+        "registerNormalUser",
+        "removeUser",
+        "listSupervisor",
+        "listNormalUser",
+        "updateUser",
+        "changeUserRole",
+        "resetPasswordUser"
+      ]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "supervisor",
+      "permission": "ALLOW",
+      "property": [
+        "findById",
+        "registerNormalUser",
+        "removeUser",
+        "listNormalUser",
+        "updateUser",
+        "changeUserRole",
+        "resetPasswordUser"
+      ]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "normal",
+      "permission": "ALLOW",
+      "property": [
+        "findById",
+        "removeUser",
+        "updateUser"
+      ]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "property": [
+        "patchAttributes"
+      ]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW",
+      "property": [
+        "registerNormalUser"
+      ]
+    }
+  ],
+  "methods": {}
+}

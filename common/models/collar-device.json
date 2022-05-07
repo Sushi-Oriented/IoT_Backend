@@ -1,0 +1,65 @@
+{
+  "name": "CollarDevice",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "device_id": {
+      "type": "string",
+      "required": true
+    },
+    "api_key": {
+      "type": "string",
+      "required": true
+    },
+    "createdDate": {
+      "type": "Date",
+      "defaultFn": "now"
+    },
+    "modifiedDate": {
+      "type": "Date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "deviceData": {
+      "type": "hasMany",
+      "model": "DeviceData",
+      "foreignKey": "collarDeviceId"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": [
+        "find",
+        "count",
+        "register",
+        "updateInfo"
+      ]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": [
+        "find",
+        "count"
+      ]
+    }
+  ],
+  "methods": {}
+}

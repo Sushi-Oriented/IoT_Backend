@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysql": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "gpscollar",
+    "password": "du53cHD6&wer#jv1i4hd63",
+    "name": "mysql",
+    "user": "gpscollar",
+    "connector": "mysql"
+  }
+}
