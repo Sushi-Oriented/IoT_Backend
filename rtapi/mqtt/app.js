@@ -67,4 +67,4 @@ setInterval(() => {
     })
 }, 30000)
 
-module.exports = aedes
+

@@ -13,9 +13,6 @@
     "contact": {
       "type": "string"
     },
-    "company": {
-      "type": "string"
-    },
     "createdDate": {
       "type": "Date",
       "defaultFn": "now"
@@ -40,7 +37,10 @@
     {
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "DENY"
+      "permission": "ALLOW",
+      "property": [
+        "ListUserbyEmail"
+      ]
     },
     {
       "principalType": "ROLE",
@@ -61,7 +61,10 @@
         "listNormalUser",
         "updateUser",
         "changeUserRole",
-        "resetPasswordUser"
+        "resetPasswordUser",
+        "listAllUser",
+        "registerUser",
+        "changeProfile"
       ]
     },
     {
@@ -83,7 +86,11 @@
         "listNormalUser",
         "updateUser",
         "changeUserRole",
-        "resetPasswordUser"
+        "resetPasswordUser",
+        "testing",
+        "listAllUser",
+        "registerUser",
+        "changeProfile"
       ]
     },
     {
@@ -99,7 +106,9 @@
         "listNormalUser",
         "updateUser",
         "changeUserRole",
-        "resetPasswordUser"
+        "resetPasswordUser",
+        "listAllUser",
+        "changeProfile"
       ]
     },
     {
@@ -113,7 +122,8 @@
         "listNormalUser",
         "updateUser",
         "changeUserRole",
-        "resetPasswordUser"
+        "resetPasswordUser",
+        "listAllUser"
       ]
     },
     {

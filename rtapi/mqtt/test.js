@@ -25,13 +25,14 @@ client.on('connect', function () {
 	client.subscribe('#');
 })
 
-/* Upon message received, 
+/* Upon message received,
  * 	  - Display the message for all the topics that we have subscribed
  */
 client.on('message', function (topic, message) {
-	// message is Buffer 
+	// message is Buffer
 	console.log(topic, message.toString());
 });
 
 client.on('error', function (err) { console.log('MQTT error: ' + err); });
 client.on('close', function (err) { console.log('MQTT close: ' + err); });
+
